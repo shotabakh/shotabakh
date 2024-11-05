@@ -5,7 +5,7 @@ html {
 body {
     background-color: rgba(0, 0, 0, 0.384);
     padding:  50px;
-    margin:  50;
+    margin:  50 60;
 }
 .full-width-image {
     width: 100%;
