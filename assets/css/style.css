@@ -1,9 +1,9 @@
 html {
-    background-color: blueviolet;
+    background-color: black;
 }
 
 body {
-    background-color: aquamarine;
+    background-color: red;
     padding:  250px;
-    margin: 200 300;
+    margin:  400;
 }
