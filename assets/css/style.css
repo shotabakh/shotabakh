@@ -1,1 +1,13 @@
+html {
+    background-color: rgb(73, 72, 72);
+}
 
+body {
+    background-color: rgb(255, 255, 255);
+    padding:  50px;
+    margin:  40 80;
+}
+.full-width-image {
+    width: 100%;
+    height: auto;
+}
