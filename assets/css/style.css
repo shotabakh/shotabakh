@@ -1,11 +1,11 @@
 html {
-    background-color: rgb(73, 72, 72);
+    background-color: rgb(46, 45, 45);
 }
 
 body {
-    background-color: rgb(255, 255, 255);
-    padding:  50px;
-    margin:  40 80;
+    background-color: rgba(92, 99, 33, 0.603);
+    padding:  90px;
+    margin:  80 80;
 }
 .full-width-image {
     width: 100%;
