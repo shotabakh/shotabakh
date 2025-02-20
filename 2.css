@@ -36,9 +36,8 @@ nav a {
 }
 main {
     background: rgba(168, 178, 255, 0.452);
-    padding: 80px;
-    margin: 80PX;
-    border-radius: 10%;
+    padding: 20px;
+    border-radius: 10px;
 }
 figure img {
     width: 100%;
@@ -48,7 +47,7 @@ footer {
     background: #222222;
     color: rgb(255, 251, 251);
     text-align: center;
-    padding: 1%;
+    padding: 2%;
 }
 .button {
     display: inline-block;

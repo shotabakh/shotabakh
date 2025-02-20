@@ -12,7 +12,7 @@ body {
     background-image: url('photo/code.jpg');
     color: rgb(255, 145, 0);
     text-align: center;
-    padding: 3%;
+    padding: 3%px;
     font-size: 1.5em;
 }
 nav {
@@ -29,26 +29,25 @@ nav a {
 .container {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 5%;
+    gap: 20px;
     max-width: 100%;
     margin: auto;
-    padding: 5%;
+    padding: 20px;
 }
 main {
     background: rgba(168, 178, 255, 0.452);
-    padding: 80px;
-    margin: 80px;
-    border-radius: 10%;
+    padding: 20px;
+    border-radius: 10px;
 }
 figure img {
     width: 100%;
-    border-radius: 2%;
+    border-radius: 10px;
 }
 footer {
     background: #222222;
     color: rgb(255, 251, 251);
     text-align: center;
-    padding: 1%;
+    padding: 2%;
 }
 .button {
     display: inline-block;
