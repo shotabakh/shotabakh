@@ -29,25 +29,26 @@ nav a {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
-    max-width: 100%;
+    max-width: 50%;
     margin: auto;
     padding: 20px;
 }
-aside {
 
-    background: rgba(255, 255, 255, 0.700);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.700);
-
-}
 main {
-        
-    background: rgba(43, 255, 0, 0.747) ;
+   
+    background: rgba(70, 70, 70, 0.884) ;
     text-align: center;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.700);
+}
+aside {
+    
+    background: rgba(255, 255, 255, 0.700);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.700);
+    
 }
 figure img {
     width: 100%;
