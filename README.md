@@ -1,1 +1,1 @@
-# html_starter
+# shota.din.ge
