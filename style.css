@@ -35,8 +35,8 @@ nav a {
 }
 aside {
     width: 250px;
-    height: auto;
-    background: rgba(43, 255, 0, 0.747) ;
+    height: 350px;
+    background: rgba(255, 255, 0, 0.897);
     text-align: center;
     padding: 20px;
     border-radius: 10px;
@@ -53,13 +53,17 @@ figure img {
     position: relative;
     border-radius: 20%;
 }
-main {
-    background: rgba(255, 255, 255, 0.700);
-    padding: 20px;
+main{
+    background: rgba(151, 111, 0, 0.897); 
+     
+   section{
+    background-color: rgb(0, 24, 90);
+    padding: 100px;
+    margin: 100px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.700);
+   }
 }
-
 footer {
     background: #222222;
     color: rgb(255, 251, 251);
@@ -68,16 +72,17 @@ footer {
 }
 .button {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 2% 5%;
     background: #28a745;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 0,5%;
     transition: 0.3s;
 }
 .button:hover {
     background: #3eb426;
 }
+
 
 @media (min-width: 576px) {
     .container {
