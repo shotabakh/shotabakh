@@ -7,6 +7,7 @@ body {
     grid-template-rows: auto auto 1fr auto;
     height: 100vh;
 }
+/* სათაური*/
  header {
     background-image: url('photo/code.jpg');
     color: rgb(255, 145, 0);
@@ -14,6 +15,7 @@ body {
     padding: 3%px;
     font-size: 1.5em;
 }
+/* ნავიგაცია*/
 nav {
     background: rgb(92, 92, 92);
     color: white;
@@ -25,20 +27,20 @@ nav a {
     text-decoration: none;
     margin: 0 3%;
 }
-main{
-    width: 100%;
+
+aside{
+    width: auto;
     background: rgba(151, 111, 0, 0.897);
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.700);
     display: grid;
     text-align: center;
     grid-template-columns:subgrid;
     font-size: 1.2em;
+    border-radius: 3cap;
 }
-aside{
-    margin: 0%;
-    padding: auto;
-    border-radius:10cap;
+main{
+    border-radius:3cap;
+    text-align: center;
     top: 0%;
     left: 0%;
     background-color: rgb(0, 24, 90);
@@ -47,8 +49,6 @@ aside{
     flex-wrap: wrap;
     justify-content: center;
     gap:20px;
-    padding: 30px;
-    margin: 20px;
   }
   
   .image-card {
@@ -59,6 +59,7 @@ aside{
     box-shadow: 0 4px 8px rgba(0,0,0,0.5);
     background: #444;
   }
+    
   
   .image-card img {
     width: auto;
@@ -69,57 +70,77 @@ aside{
 }
 
 footer {
+    height: 100%;
+    font-size: 1.3em;
     background: #222222;
     color: rgb(255, 251, 251);
     text-align: center;
     padding: 10px;
 }
 
-/*ტელეფონის ვერსია*/
-@media (max-width: 683px) and (min-width: 20px){   
-    
+
+/* ტელეფონის ვერსია (456px და ნაკლები) */
+@media (max-width: 576px) {
     .container {
         grid-template-columns: 1fr;
-        padding: 10px;
     }
-
+    figure img {
+      width: 50%;
+    }
     aside {
-        max-width: auto;
+        width: 50%;
         height: auto;
-        margin-bottom: 20px;
+        position: static;
+        padding: 0px;
+        margin-inline: 25%;
+        margin-top: 10%;
     }
-     main{
+    main {
         width: auto;
         height: auto;
-     }
-    main .gallery{
         padding: 20px;
-        margin: 10px 0;
+        margin-inline: 25%;
+        margin-top: 10%;
+    }
+
+    main section {
+        padding: 20px;
+        margin-inline: 1%;
+        margin-block: 20%;
+        margin-top: 1%;
+        
     }
 
     nav a {
         display: block;
         margin: 10px 0;
     }
-
-    figure img {
-        max-width: 100%;
-    }
 }
 
-/* პლანშეტის ვერსია (683px - 991px) */
-@media (min-width: 683px) and (max-width: 991px) {
+
+/* პლანშეტის ვერსია (577px - 991px) */
+@media (min-width: 577px) and (max-width: 991px) {
     .container {
         grid-template-columns: 250px 1fr;
         padding: 20px;
     }
-
-    aside{
+    figure img {
+        width: 100%;
+      }
+    aside {
+        width: 40%;
+        height: auto;
+        position: static;
+        padding: 0px;
+        margin-inline: 25%;
+        margin-top: 10%;
+    }
+    main {
         width: auto;
         height: auto;
-        position: relative;
+        margin: 5%;
+        padding: 5%;
     }
-
     main section {
         padding: 20px;
         margin: 20px;
@@ -135,21 +156,41 @@ footer {
 /* კომპიუტერის ვერსია (992px და ზემოთ) */
 @media (min-width: 992px) {
     .container {
-        grid-template-columns: 300px 1fr;
+        display: grid;
+        grid-template-columns: 300px 1fr; /* aside | main */
+        gap: 30px;
         max-width: 1200px;
         margin: 0 auto;
         padding: 30px;
+        align-items: start;
+    }
+    figure img {
+        width: 100%;
+      }
+    aside {
+        width: 40%;
+        height: auto;
+        position: static;
+        padding: 0px;
+        margin-inline: 30%;
+        margin-top: 10%;
+    }
+
+    main {
+        width: auto;
+        height: auto;
+        margin: 5%;
+        padding: 5%;
     }
 
     main section {
-        padding: 30px;
-        margin: 30px;
-    }
-
-    nav a {
-        margin: 0 20px;
+        padding: 0px;
+        margin-inline: 0%;
+        margin-block: 0%;
+        margin-top: 0%;
     }
 }
+
 
 
 
