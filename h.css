@@ -157,7 +157,7 @@ footer {
 @media (min-width: 992px) {
     .container {
         display: grid;
-        grid-template-columns: 300px 1fr; /* aside | main */
+        grid-template-columns: 300px 1fr;
         gap: 30px;
         max-width: 1200px;
         margin: 0 auto;
@@ -168,12 +168,12 @@ footer {
         width: 100%;
       }
     aside {
-        width: 40%;
+        width: auto;
         height: auto;
         position: static;
         padding: 0px;
-        margin-inline: 30%;
-        margin-top: 10%;
+        margin-inline: 0%;
+        margin-top: 15%;
     }
 
     main {
