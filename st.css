@@ -22,6 +22,8 @@ nav {
     text-align: center;
 }
 nav a {
+    font-weight: bolder;
+    font-size: 1.2em;
     color: white;
     text-decoration: none;
     margin: 0 15px;
@@ -132,12 +134,15 @@ footer {
         padding: 0px;
         margin-left: 0%;
         margin-top: 27%;
+        figure img {
+            margin-bottom: 80%;
+        }
     }
     
     main {
         width: auto;
         height: auto;
-        margin: 14% ;
+        margin: 10% ;
         padding: 20px ;
         
     }
@@ -167,12 +172,15 @@ footer {
 
     aside {
         
-        height: 89%;
+        height: 87%;
         position: static;
         padding: 0px;
         margin: 10%;
         margin-inline: 30%;
         margin-top: 29%;
+        figure img {
+            margin-bottom: 80%;
+        }
     }
     
     main {

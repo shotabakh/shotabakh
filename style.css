@@ -24,6 +24,8 @@ nav a {
     color: white;
     text-decoration: none;
     margin: 0 3%;
+    font-weight: bolder;
+    font-size: 1.2em;
 }.container {
     display: grid;
     grid-template-columns: 1fr;
@@ -57,12 +59,24 @@ main{
     top: 0%;
     left: 0%;
    section{
-    
     background-color: rgb(0, 24, 90);
     border-radius: 1cap;
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.700);
     font-size: 1.2em;
+
    }
+   p{
+   color:beige;
+}
+h2{
+    color: aqua;
+}
+a{
+    color:rgb(255, 123, 0);
+    text-decoration:none;
+    font-size: 1.2em;
+    font-weight:bolder;
+}
 }
 footer {
     background: #222222;
