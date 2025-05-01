@@ -11,7 +11,7 @@ body {
     background-image: url('photo/code.jpg');
     color: rgb(255, 145, 0);
     text-align: center;
-    padding: 3%px;
+    padding: 3%;
     font-size: 1.5em;
 }
 nav {
@@ -65,19 +65,20 @@ main{
     font-size: 1.2em;
 
    }
-   p{
+}
+  main p{
    color:beige;
 }
-h2{
+main h2{
     color: aqua;
 }
-a{
+main a{
     color:rgb(255, 123, 0);
     text-decoration:none;
     font-size: 1.2em;
     font-weight:bolder;
 }
-}
+
 footer {
     background: #222222;
     color: rgb(255, 251, 251);
@@ -106,6 +107,7 @@ footer a{
 
 /* ტელეფონის ვერსია (576px და ნაკლები) */
 @media (max-width: 576px) {
+    
     .container {
         grid-template-columns: 1fr;
     }
@@ -142,7 +144,41 @@ footer a{
     .button{
         font-size: 0.8em;
     }
-}
+    .burger-toggle {
+      display: none;
+    }
+  
+    .burger-icon {
+      display: block;
+      background: #444;
+      color: white;
+      padding: 10px;
+      font-size: 1.5em;
+      text-align: center;
+      cursor: pointer;
+    }
+  
+    .burger-menu {
+      display: none;
+      flex-direction: column;
+      background: #333;
+      text-align: center;
+    }
+  
+    .burger-menu a {
+      color: white;
+      padding: 10px;
+      border-bottom: 1px solid #555;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  
+    .burger-toggle:checked + .burger-icon + .burger-menu {
+      display: flex;
+    }
+  }
+  
+
 
 
 /* პლანშეტის ვერსია (577px - 991px) */
