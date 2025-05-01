@@ -32,20 +32,24 @@ nav a {
 
 aside{
     width: auto;
-    background: rgba(151, 111, 0, 0.897);
+    background: rgba(70, 70, 70, 0.938);
     border-radius: 10px;
     display: grid;
     text-align: center;
     grid-template-columns:subgrid;
-    font-size: 1.2em;
+    font-size: 1.4em;
     border-radius: 3cap;
+    
+        color: rgb(255, 255, 255);
+    
 }
+
 main{
     border-radius:3cap;
     text-align: center;
     top: 0%;
     left: 0%;
-    background-color: rgb(0, 24, 90);
+    background-color: rgba(0, 255, 106, 0.623);
 .gallery {
     
     display: grid;
@@ -59,7 +63,7 @@ main{
     max-width: 100%;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    box-shadow: 0 4px 8px rgb(61, 61, 61);
     background: #444;
   }
     
@@ -172,26 +176,22 @@ footer a{
         width: 100%;
       }
     aside {
-        width: auto;
+        width: 50%;
         height: auto;
         position: static;
         padding: 0px;
         margin-inline: 0%;
-        margin-top: 15%;
+        margin-top: 0%;
     }
 
-    main {
+    
+
+    .gallery{
+   
         width: auto;
         height: auto;
         margin: 5%;
         padding: 5%;
-    }
-
-    main.gallery{
-        padding: 0px;
-        margin-inline: 0%;
-        margin-block: 0%;
-        margin-top: 0%;
     }
 }
 

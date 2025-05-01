@@ -81,6 +81,12 @@ footer {
     text-align: center;
     padding: 10px;
 }
+footer a{
+    
+    color: rgb(0, 102, 255);
+    text-decoration: none;
+    margin: 0 3%;
+}
 
 
 /* ტელეფონის ვერსია (456px და ნაკლები) */
