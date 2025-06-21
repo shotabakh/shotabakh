@@ -1,0 +1,90 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding: 0;
+    background-image: url('/photo/4.jpg');
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    height: 100vh;
+}
+header{
+    background: rgba(255, 0, 0, 0.493);
+    color: rgb(255, 255, 0);
+    text-align: center;
+    padding-bottom: 3px;
+    font-size: 1.5em;
+
+}
+nav{
+    background: rgba(81, 255, 0, 0.623);
+    color: aqua;
+    padding: 0%;
+    text-align: center;
+}
+nav a{
+    font-size: 1,1em;
+    text-decoration: none;
+    color: rgb(0, 255, 255);
+    margin:0 15px;
+}
+main{
+    margin: 10%;
+    padding: 100%;
+   
+}
+.container{
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+    border-radius: 5cap;
+}
+.section{
+    margin: 5%;
+    display: grid;
+    border-radius: 5cap;
+    background-color: rgba(211, 152, 42, 0.493);
+    gap: 15px;
+    grid-template-rows: 20% 20% 20% 20% 20% 20% 20% 20% 20% 20%;
+    grid-template-columns: 20% 20% 20% 20% 20% 20%;
+    padding: 1%;
+
+
+.container-1{
+    grid-row: 1 / 1;
+    grid-column: 1 / 5;
+}
+.container-2{
+    grid-row: 4 / 4 ;
+    grid-column: 2/ 4;
+}
+.container-3{
+    grid-row: 5/ 5;
+    grid-column: 3/ 5;
+}
+.container-4{
+    grid-row: 3 / 3;
+    grid-column: 3/ 5;
+}
+.container-5{
+    grid-row: 3/3 ;
+    grid-column: 1/ 1;
+}
+.container-6{
+    grid-row: 4/ 4;
+    grid-column: 1/ 1;
+}
+.container-7{
+    grid-row: 3 / 3;
+    grid-column: 2 / 2;
+    height: 97%;
+}
+}
+footer{
+    background: rgba(0, 255, 0, 0.473);
+    color: black;
+    text-align: center;
+    font-size: 1.4em;
+    margin: 0%;
+    padding: 0%;
+}
+ 
