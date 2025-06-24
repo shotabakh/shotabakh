@@ -89,8 +89,8 @@ footer{
             position: sticky;
             align-self: start;
             grid-area: navbar;
-            background: rgba(81, 255, 0, 0.623);
-            color: aqua;
+            background: rgba(0, 0, 0, 0.623);
+            color: rgb(255, 255, 255);
             padding: 0%;
             text-align: center;
         
@@ -109,7 +109,7 @@ footer{
     display: grid;
     border-radius: 5cap;
     background-color: rgba(211, 152, 42, 0.493);
-    gap: 3px;
+    gap: 30px;
     grid-template-rows:1fr ;
     grid-template-columns:1fr  ;
     padding: 1%;
