@@ -1,33 +1,47 @@
 body{
+    min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
     margin:0;
     padding: 0;
     background-image: url('/photo/4.jpg');
     display: grid;
-    grid-template-rows: auto auto 1fr auto;
-    height: 100vh;
+    grid-template-columns: 150px 1fr;
+    grid-template-areas: 
+    "header header"
+    "navbar main"
+    "navbar footer";
+    grid-template-rows: auto 1fr auto;
 }
 header{
+    position: sticky;
+    top: 0;
+    grid-area: header;
     background: rgba(255, 0, 0, 0.493);
     color: rgb(255, 255, 0);
     text-align: center;
-    padding-bottom: 3px;
     font-size: 1.5em;
 
 }
 nav{
+    height: calc(100vh - 132.1px);
+    top: 132.1px;
+    position: sticky;
+    align-self: start;
+    grid-area: navbar;
     background: rgba(81, 255, 0, 0.623);
     color: aqua;
     padding: 0%;
     text-align: center;
 }
 nav a{
+    grid-area: navbar;
     font-size: 1,1em;
     text-decoration: none;
     color: rgb(0, 255, 255);
     margin:0 15px;
 }
 main{
+    grid-area: main;
     margin: 10%;
     padding: 100%;
    
@@ -80,6 +94,7 @@ main{
 }
 }
 footer{
+    grid-area: footer;
     background: rgba(0, 255, 0, 0.473);
     color: black;
     text-align: center;
@@ -87,7 +102,31 @@ footer{
     margin: 0%;
     padding: 0%;
 }
-@media (max-width: 429px){
+@media (max-width: 600px){
+    body{
+        grid-template-columns: 1fr;
+    }
+    header{
+        font-size: 0.7em;
+    }
+    nav{
+        position: fixed;
+        width: 200px;
+        display: none;
+            height: calc(100vh - 160.31px);
+            top: 160.31px;
+            position: sticky;
+            align-self: start;
+            grid-area: navbar;
+            background: rgba(81, 255, 0, 0.623);
+            color: aqua;
+            padding: 0%;
+            text-align: center;
+        
+    }
+    .show{
+        display: block;
+    }
 .container{
     width: 100%;
     margin: 0%;
