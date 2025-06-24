@@ -5,7 +5,7 @@ body{
     padding: 0;
     background-image: url(photo/1000001622.jpg);
     display: grid;
-    grid-template-columns: 150px 1fr;
+    grid-template-columns: 70px 1fr;
     grid-template-areas: 
     "header header"
     "navbar main"
