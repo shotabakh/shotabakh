@@ -41,11 +41,9 @@ aside {
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.700);
     display: grid;
     grid-template-columns: none;
-    top: 0;
-    left: 0;
+    
 }
 figure img {
-width: 80%;
     top: 0%;
     left: 0%;
     border-radius:20cap;
