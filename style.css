@@ -57,6 +57,7 @@ main{
    section{
     background-color: rgb(0, 24, 90);
     border-radius: 1cap;
+
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.700);
     font-size: 1.2em;
 
@@ -253,6 +254,7 @@ footer a{
     main {
         width: auto;
         height: auto;
+        
         margin: 5%;
         padding: 5%;
     }

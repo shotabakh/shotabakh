@@ -28,48 +28,32 @@ nav a {
     text-decoration: none;
     margin: 0 3%;
 }
+.container{
+    width: 100%;
+    margin:0%;
+    padding: 0%;
+    border-radius: 5cap;
+}
 
-aside{
-    width: auto;
-    background: rgba(151, 111, 0, 0.897);
-    border-radius: 10px;
-    display: grid;
-    text-align: center;
-    grid-template-columns:subgrid;
-    font-size: 1.2em;
-    border-radius: 3cap;
+  
+    
+    
+
 }
-main{
-    border-radius:3cap;
-    text-align: center;
-    top: 0%;
-    left: 0%;
-    background-color: rgb(0, 24, 90);
 .gallery {
-    
+    margin: 0%;
     display: grid;
-    grid-template-columns:auto;
-    justify-content: center;
-    gap:20px;
-  }
-  
-  .image-card {
-    flex: 1 1 1 ;
-    max-width: 100%;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-    background: #444;
+    border-radius: 5cap;
+    background-color: rgba(211, 152, 42, 0.493);
+    gap: 3px;
+    grid-template-rows: 1fr;
+    grid-template-columns:1fr; 
+    padding: 0%;
+    
   }
     
   
-  .image-card img {
-    width: auto;
-    height: 400px;
-    object-fit: cover;
-    display: block;
-  }
-}
+
 
 footer {
     height: 100%;
@@ -95,14 +79,7 @@ footer a{
     figure img {
       width: 100%;
     }
-    aside {
-        width: 50%;
-        height: auto;
-        position: static;
-        padding: 0px;
-        margin-inline: 25%;
-        margin-top: 10%;
-    }
+
     main {
         width: auto;
         height: auto;
@@ -130,14 +107,7 @@ footer a{
     figure img {
         width: 100%;
       }
-    aside {
-        width: 40%;
-        height: auto;
-        position: static;
-        padding: 0px;
-        margin-inline: 25%;
-        margin-top: 10%;
-    }
+
     main {
         width: auto;
         height: auto;
@@ -170,28 +140,10 @@ footer a{
     figure img {
         width: 100%;
       }
-    aside {
-        width: auto;
-        height: auto;
-        position: static;
-        padding: 0px;
-        margin-inline: 0%;
-        margin-top: 15%;
-    }
 
-    main {
-        width: auto;
-        height: auto;
-        margin: 5%;
-        padding: 5%;
-    }
 
-    main.gallery{
-        padding: 0px;
-        margin-inline: 0%;
-        margin-block: 0%;
-        margin-top: 0%;
-    }
+
+ 
 }
 
 
