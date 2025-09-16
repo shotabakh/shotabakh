@@ -37,7 +37,8 @@ nav a{
     grid-area: navbar;
     font-size: 1,1em;
     text-decoration: none;
-    color: rgb(0, 255, 255);
+    color: rgb(255, 0, 0);
+    
     margin:0 15px;
 }
 main{

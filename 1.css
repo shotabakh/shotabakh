@@ -28,7 +28,7 @@ nav{
     position: sticky;
     align-self: start;
     grid-area: navbar;
-    background: rgba(81, 255, 0, 0.623);
+    background: rgba(27, 85, 0, 0.856);
     color: aqua;
     padding: 0%;
     text-align: center;
@@ -37,7 +37,7 @@ nav a{
     grid-area: navbar;
     font-size: 1,1em;
     text-decoration: none;
-    color: rgb(0, 255, 255);
+    color: rgb(0, 0, 0);
     margin:0 15px;
 }
 main{
