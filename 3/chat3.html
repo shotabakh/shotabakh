@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ჩატი</title>
+  <link rel="stylesheet" href="/3/chat.css">
+</head>
+<body>
+  <div class="chat-container">
+    <div class="chat-header">
+      <button onclick="goBack()">←</button>
+      <h2 id="chatUser"></h2>
+    </div>
+    <div class="messages" id="messages">
+      <!-- შეტყობინებები -->
+    </div>
+    <div class="chat-input">
+      <input type="text" id="messageInput" placeholder="მიწერე...">
+      <button onclick="sendMessage()">გაგზავნა</button>
+    </div>
+  </div>
+  <script src="/3/chat.css"></script>
+</body>
+</html>

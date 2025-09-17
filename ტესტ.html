@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WhatsApp-style Demo</title>
+<style>
+body { margin:0; font-family:Arial; background:#e5ddd5; display:flex; justify-content:center; align-items:center; height:100vh; }
+.page { width:360px; height:640px; background:white; border-radius:20px; overflow:hidden; position:relative; box-shadow:0 0 10px rgba(0,0,0,0.3);}
+.hidden { display:none; }
+input[type=text], input[type=file] { width:90%; padding:10px; margin:10px auto; display:block; border-radius:5px; border:1px solid #ccc;}
+button { width:90%; padding:10px; margin:10px auto; display:block; border:none; border-radius:5px; background:#128C7E; color:white; font-weight:bold; cursor:pointer;}
+#avatarPreview { width:120px; height:120px; border-radius:50%; margin:10px auto; background:#f0f0f0; overflow:hidden; display:flex; justify-content:center; align-items:center;}
+#avatarPreview img { width:100%; }
+#profileAvatar { width:120px; height:120px; border-radius:50%; margin:10px auto; overflow:hidden; }
+#profileAvatar img { width:100%; }
+#chat { flex:1; padding:10px; overflow-y:auto; display:flex; flex-direction:column;}
+.msg { display:flex; max-width:70%; padding:5px 10px; border-radius:15px; margin:5px; position:relative; }
+.me { background:#dcf8c6; align-self:flex-end; justify-content:flex-end; }
+.other { background:#fff; align-self:flex-start; justify-content:flex-start; }
+.msg img { width:30px; height:30px; border-radius:50%; margin-right:5px; }
+.timestamp { font-size:10px; color:gray; position:absolute; bottom:-15px; right:10px; }
+#inputArea { display:flex; padding:5px; border-top:1px solid #ccc; background:#f0f0f0;}
+#message { flex:1; padding:8px; border-radius:20px; border:1px solid #ccc; }
+#send { width:60px; margin-left:5px; border-radius:20px; border:none; background:#128C7E; color:white; font-weight:bold; cursor:pointer; }
+</style>
+</head>
+<body>
+
+<div class="page" id="registrationPage">
+  <h2 style="text-align:center;">რეგისტრაცია</h2>
+  <input type="text" id="name" placeholder="სახელი">
+  <input type="text" id="idNumber" placeholder="პირადი ნომერი">
+  <input type="file" id="avatar" accept="image/*">
+  <div id="avatarPreview">Avatar</div>
+  <button id="startBtn">დაწყება</button>
+</div>
+
+<div class="page hidden" id="profilePage">
+  <div id="profileAvatar"><img id="pAvatar"></div>
+  <h2 id="pName" style="text-align:center;"></h2>
+  <p id="pId" style="text-align:center;"></p>
+  <button id="chatBtn">Chat</button>
+</div>
+
+<div class="page hidden" id="chatPage" style="display:flex; flex-direction:column;">
+  <div id="chat"></div>
+  <div id="inputArea">
+    <input type="text" id="message" placeholder="შენი მესიჯი">
+    <button id="send">Send</button>
+  </div>
+</div>
+
+<script>
+let avatarData = '';
+const avatarInput = document.getElementById('avatar');
+const avatarPreview = document.getElementById('avatarPreview');
+
+avatarInput.onchange = function(e){
+    const file = e.target.files[0];
+    if(!file) return;
+    const reader = new FileReader();
+    reader.onload = function(ev){
+        avatarData = ev.target.result;
+        avatarPreview.innerHTML = '';
+        const img = document.createElement('img');
+        img.src = avatarData;
+        avatarPreview.appendChild(img);
+    };
+    reader.readAsDataURL(file);
+};
+
+const startBtn = document.getElementById('startBtn');
+startBtn.onclick = function(){
+    const name = document.getElementById('name').value.trim();
+    const id = document.getElementById('idNumber').value.trim();
+    if(!name || !id || !avatarData){
+        alert('შეიყვანე ყველა ველი და აირჩიე ავატარი');
+        return;
+    }
+    localStorage.setItem('userName', name);
+    localStorage.setItem('userId', id);
+    localStorage.setItem('avatar', avatarData);
+
+    // Profile Page Load
+    document.getElementById('pAvatar').src = avatarData;
+    document.getElementById('pName').textContent = name;
+    document.getElementById('pId').textContent = id;
+
+    document.getElementById('registrationPage').classList.add('hidden');
+    document.getElementById('profilePage').classList.remove('hidden');
+};
+
+// Profile -> Chat
+document.getElementById('chatBtn').onclick = function(){
+    document.getElementById('profilePage').classList.add('hidden');
+    document.getElementById('chatPage').classList.remove('hidden');
+    loadMessages();
+};
+
+// Chat functionality
+const chatDiv = document.getElementById('chat');
+const sendBtn = document.getElementById('send');
+const messageInput = document.getElementById('message');
+const userName = localStorage.getItem('userName');
+const userAvatar = localStorage.getItem('avatar');
+const userId = localStorage.getItem('userId');
+const adminName = 'Admin';
+const adminAvatar = 'https://i.imgur.com/8Km9tLL.png';
+
+function addMessage(name,text,avatar,type){
+    const msgDiv = document.createElement('div');
+    msgDiv.className = 'msg ' + type;
+
+    const img = document.createElement('img');
+    img.src = avatar;
+    msgDiv.appendChild(img);
+
+    const span = document.createElement('span');
+    span.textContent = text;
+    msgDiv.appendChild(span);
+
+    const time = document.createElement('div');
+    time.className = 'timestamp';
+    time.textContent = new Date().toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'});
+    msgDiv.appendChild(time);
+
+    chatDiv.appendChild(msgDiv);
+    chatDiv.scrollTop = chatDiv.scrollHeight;
+}
+
+function loadMessages(){
+    const msgs = JSON.parse(localStorage.getItem('chat_'+userId) || '[]');
+    msgs.forEach(m=>addMessage(m.name,m.text,m.avatar,m.type));
+}
+
+sendBtn.onclick = function(){
+    const text = messageInput.value.trim();
+    if(!text) return;
+    addMessage(userName,text,userAvatar,'me');
+
+    const msgs = JSON.parse(localStorage.getItem('chat_'+userId) || '[]');
+    msgs.push({name:userName,text,avatar:userAvatar,type:'me'});
+    localStorage.setItem('chat_'+userId, JSON.stringify(msgs));
+    messageInput.value='';
+};
+</script>
+</body>
+</html>
