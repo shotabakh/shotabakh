@@ -40,13 +40,15 @@ document.addEventListener("DOMContentLoaded", () => {
         div.innerHTML = `<span>${u}</span> <button onclick="openChat('${u}')">ჩატი</button>`;
         chatList.appendChild(div);
       });
-  
       document.getElementById("search").addEventListener("input", (e) => {
         const searchValue = e.target.value.toLowerCase();
         Array.from(chatList.children).forEach(item => {
-          item.style.display = item.innerText.toLowerCase().includes(searchValue) ? "flex" : "none";
+          const id = item.querySelector("small").innerText.toLowerCase(); // ID-ს ვიღებთ
+          item.style.display = id.includes(searchValue) ? "flex" : "none";
         });
       });
+      
+    
     }
   
     // ჩატის გვერდი
