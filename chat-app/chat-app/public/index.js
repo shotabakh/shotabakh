@@ -33,4 +33,5 @@ loginForm.addEventListener("submit", async (e) => {
   } else {
     alert(data.message || JSON.stringify(data));
   }
+  
 });
