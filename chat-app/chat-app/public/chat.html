@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Chat App</title>
+  <style>
+    body { font-family: Arial; display:flex; height:100vh; margin:0; }
+    #users { width:200px; border-right:1px solid #ccc; overflow-y:scroll; }
+    #chat { flex:1; display:flex; flex-direction:column; }
+    #messages { flex:1; padding:10px; overflow-y:scroll; border-bottom:1px solid #ccc; }
+    #input { display:flex; }
+    #input input { flex:1; padding:5px; }
+    #input button { padding:5px; }
+    .user { padding:5px; cursor:pointer; display:flex; align-items:center; }
+    .user img { width:30px; height:30px; border-radius:50%; margin-right:5px; }
+    .msg { margin-bottom:5px; }
+    .msg.you { text-align:right; }
+  </style>
+</head>
+<body>
+  <div id="users"></div>
+  <div id="chat">
+    <div id="messages"></div>
+    <div id="input">
+      <input type="text" id="message" placeholder="შეიყვანე მესიჯი">
+      <button id="sendBtn">Send</button>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/chat-app/chat-app/public/main.js"></script>
+</body>
+</html>
