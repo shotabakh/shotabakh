@@ -3,20 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chat App</title>
+  <title>ჩატი</title>
   <link rel="stylesheet" href="/chat-app/chat-app/chat-demo/chat.css">
 </head>
 <body>
-  <div class="container">
+  <div class="chat-container">
     <h2>ჩატი</h2>
-    <div id="messages"></div>
-
+    <div id="messages" class="messages"></div>
+    
     <form id="chatForm">
-      <input type="text" id="messageInput" placeholder="შეიყვანე ტექსტი..." required>
+      <input type="text" id="messageInput" placeholder="მესიჯი..." required>
       <button type="submit">გაგზავნა</button>
     </form>
-
-    <button id="logoutBtn">Logout</button>
   </div>
 
   <script src="/chat-app/chat-app/chat-demo/chat.js"></script>

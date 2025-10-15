@@ -1,3 +1,22 @@
+
+// შეტყობინების გაგზავნა
+chatForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const text = messageInput.value.trim();
+  if (!text) return;
+
+  // ვამატებთ მესიჯს DOM-ში
+  const messageEl = document.createElement("div");
+  messageEl.classList.add("message");
+  messageEl.textContent = text;
+  messagesDiv.appendChild(messageEl);
+
+  // ვასუფთავებთ input-ს
+  messageInput.value = "";
+});
+
+
 const chatForm = document.getElementById("chatForm");
 const messageInput = document.getElementById("messageInput");
 const messagesDiv = document.getElementById("messages");
