@@ -199,6 +199,30 @@ footer a{
     .burger-toggle:checked + .burger-icon + .burger-menu {
     display: flex;
     }
+    #messenger-btn a {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #0084ff;
+        color: white;
+        font-size: 25px;
+        text-decoration: none;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        transition: all 0.3s ease;
+        z-index: 9999;
+    }
+    
+    #messenger-btn:hover {
+        background-color: #006edc;
+        transform: scale(1.1);
+    }
+    
 }
 
 
@@ -248,6 +272,30 @@ footer a{
     .burger-toggle {
     display: none;
     }
+    #messenger-btn a {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #0084ff;
+        color: white;
+        font-size: 25px;
+        text-decoration: none;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        transition: all 0.3s ease;
+        z-index: 9999;
+    }
+    
+    #messenger-btn:hover {
+        background-color: #006edc;
+        transform: scale(1.1);
+    }
+    
 }
 
 
@@ -304,5 +352,29 @@ footer a{
 
         display: none;
     }
+    #messenger-btn a {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #0084ff;
+        color: white;
+        font-size: 25px;
+        text-decoration: none;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        transition: all 0.3s ease;
+        z-index: 9999;
+    }
+    
+    #messenger-btn:hover {
+        background-color: #006edc;
+        transform: scale(1.1);
+    }
+    
 }
 
