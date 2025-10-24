@@ -103,7 +103,7 @@ footer a{
 .button:hover {
     background: #3eb426;
 }
-#messenger-btn a {
+#messenger-btn {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -122,7 +122,7 @@ footer a{
     z-index: 9999;
 }
 
-#messenger-btn:hover a{
+#messenger-btn:hover {
     background-color: #006edc;
     transform: scale(1.1);
 }
@@ -199,7 +199,7 @@ footer a{
     .burger-toggle:checked + .burger-icon + .burger-menu {
     display: flex;
     }
-    #messenger-btn a {
+    #messenger-btn {
         position: fixed;
         bottom: 20px;
         right: 20px;
@@ -272,7 +272,7 @@ footer a{
     .burger-toggle {
     display: none;
     }
-    #messenger-btn a {
+    #messenger-btn {
         position: fixed;
         bottom: 20px;
         right: 20px;
@@ -352,7 +352,7 @@ footer a{
 
         display: none;
     }
-    #messenger-btn a {
+    #messenger-btn {
         position: fixed;
         bottom: 20px;
         right: 20px;
