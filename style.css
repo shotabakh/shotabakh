@@ -103,8 +103,8 @@ footer a{
 }
 #messenger-btn {
     position: fixed;
-    bottom: 10px;
-    right: 10px;
+    bottom: 20px;
+    right: 20px;
     background-color: #0084ff;
     color: white;
     font-size: 25px;
@@ -118,13 +118,13 @@ footer a{
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     transition: all 0.3s ease;
     z-index: 9999;
-  }
-  
-  #messenger-btn:hover {
+}
+
+#messenger-btn:hover {
     background-color: #006edc;
     transform: scale(1.1);
-  }
-  
+}
+
 
 /* ტელეფონის ვერსია (576px და ნაკლები) */
 @media (max-width: 576px) {
