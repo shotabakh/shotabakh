@@ -122,7 +122,7 @@ footer a{
     z-index: 9999;
 }
 
-#messenger-btn:hover {
+#messenger-btn:hover a{
     background-color: #006edc;
     transform: scale(1.1);
 }
